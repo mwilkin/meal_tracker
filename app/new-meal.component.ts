@@ -3,6 +3,7 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: 'new-meal',
+  outputs: ['onSubmitNewMeal'],
   template: `
     <div class="meal-form">
       <h3>Create a new Meal:</h3>
@@ -14,12 +15,12 @@ import { Meal } from './meal.model';
   `
 })
 export class NewMealComponent {
-  public onSubmitNewMeal: EventEmitter<Meal>;
+  public onSubmitNewMeal: EventEmitter<String[]>;
   constructor(){
     this.onSubmitNewMeal = new EventEmitter();
   }
   addMeal(userName: HTMLInputElement, userDescription: HTMLInputElement, userCalories: HTMLInputElement){
-    this.onSubmitNewMeal.emit(userName.value);
+    this.onSubmitNewMeal.emit([userName.value, userDescription.value, userCalories.value]);
     userName.value = "";
     userDescription.value = "";
     userCalories.value = "";

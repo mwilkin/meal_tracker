@@ -14,5 +14,5 @@ import { Meal } from './meal.model';
   `
 })
 export class EditMealDetailsComponent {
-  public task: Task;
+  public meal: Meal;
 }
