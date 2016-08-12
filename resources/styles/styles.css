@@ -54,12 +54,14 @@ h1 {
   background: #84DCC6;
   padding: 30px;
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 #header {
-  background: #D6EDFF;
+  background: #FAF3DD;
   padding-top: 40px;
   padding-bottom: 40px;
   margin-left: 20px;
   margin-right: 20px;
+  font-weight: 600;
 }
