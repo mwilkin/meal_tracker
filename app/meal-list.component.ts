@@ -17,7 +17,7 @@ import { NewMealComponent } from './new-meal.component';
     </meal-display>
     <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
     </edit-meal-details>
-    <new-meal (onSubmitNewTask)="createMeal($event)"></new-meal>
+    <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
   `
 })
 export class MealListComponent {
