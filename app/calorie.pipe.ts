@@ -5,7 +5,8 @@ import { Meal } from './meal.model';
   name: "calorie",
   pure: false
 })
-  var transform = function (input: Meal[], info){
+  transform(input: Meal[], info){
+    var calorieCount = info[2];
     var output: Meal[] = [];
     for (var i= 0; i < input.length; i++) {
       if (info[2] >= 500) {
